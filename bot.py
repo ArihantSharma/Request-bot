@@ -87,8 +87,7 @@ async def chatHandler(bot:Update, msg:Message):
 # return channel id when message/post from channel is forwarded
 @app.on_message(filters.forwarded & filters.private)
 async def forwardedHandler(bot:Update, msg:Message):
-    forwardInfo = msg.forward_from_chat
-    if forwardInfo.type == "channel":   # If message forwarded from channel
+    if msg.forward_from_chat.type == "channel":   # If message forwarded from channel
         await msg.reply_text(
             f"<b>Hey😁, Your Channel ID is <code>{forwardInfo.id}</code>\n\n😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
             parse_mode = "html"
