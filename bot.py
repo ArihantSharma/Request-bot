@@ -89,7 +89,7 @@ async def chatHandler(bot:Update, msg:Message):
 async def forwardedHandler(bot:Update, msg:Message):
     if msg.forward_from_chat.type == "channel":   # If message forwarded from channel
         await msg.reply_text(
-            f"<b>Hey😁, Your Channel ID is <code>{forwardInfo.id}</code>\n\n😊Join @Rokubotz for getting more awesome 🤖bots like this.</b>",
+            f"<b>Hey😁, Your Channel ID is <code>{forwardInfo.id}</code>\n\n😊Join @Yugen_Bots for getting more awesome 🤖bots like this.</b>",
             parse_mode = "html"
         )
     return
